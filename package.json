@@ -1,6 +1,6 @@
 {
   "name": "@jswork/simple-date-format",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple date format.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -51,5 +51,10 @@
       ],
       "@babel/preset-typescript"
     ]
-  }
+  },
+  "keywords": [
+    "dateformat",
+    "format",
+    "sdf"
+  ]
 }
