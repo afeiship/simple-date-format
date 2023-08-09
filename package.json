@@ -1,6 +1,6 @@
 {
   "name": "@jswork/simple-date-format",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A simple date format.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
