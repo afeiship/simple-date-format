@@ -21,7 +21,14 @@ const simpleDateFormat = (format: string, time?: TimeType) => {
   const reg = FORMAT_HOOKS[format] || format;
   const date = time ? (typeof time === 'string' ? new Date(time) : time) : new Date();
   const map: any = {};
-  map.YYYY = date.getFullYear();
+  const fullYear = date.getFullYear();
+
+  // test valid
+  const valid = !isNaN(fullYear) && fullYear > 0;
+  if (!valid) throw new Error('invalid input');
+
+  // construct map
+  map.YYYY = fullYear;
   map.YY = ('' + map.YYYY).slice(2);
   map.M = date.getMonth() + 1;
   map.MM = pad(map.M);
@@ -34,6 +41,7 @@ const simpleDateFormat = (format: string, time?: TimeType) => {
   map.s = date.getSeconds();
   map.ss = pad(map.s);
 
+  // format
   return reg.replace(/\bYYYY|YY|MM|M|DD|D|HH|H|mm|m|ss|s\b/g, ($1) => map[$1]);
 };
 

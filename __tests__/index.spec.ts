@@ -27,4 +27,9 @@ describe('api.basic', () => {
     const d = new Date('2019/01/01 12:00:00');
     expect(sdf('YYYY-MM-DD HH:mm:ss', d)).toBe('2019-01-01 12:00:00');
   });
+
+  test.only('invalid input', () => {
+    const toThow = () => sdf('YYYY-MM-DD HH:mm:ss', 'xyz');
+    expect(toThow).toThrowError('invalid input');
+  })
 });
