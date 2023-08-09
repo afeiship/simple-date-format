@@ -43,8 +43,6 @@ const FORMAT_HOOKS = {
 | YYYY   | 2018             | 四位数的年份         |
 | M      | 1-12             | 月份，从 1 开始      |
 | MM     | 01-12            | 月份，两位数         |
-| MMM    | Jan-Dec          | 缩写的月份名称       |
-| MMMM   | January-December | 完整的月份名称       |
 | D      | 1-31             | 月份里的一天         |
 | DD     | 01-31            | 月份里的一天，两位数 |
 
