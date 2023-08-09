@@ -16,11 +16,12 @@ npm install @jswork/simple-date-format
 import sdf from '@jswork/simple-date-format';
 
 // get current datetime:
-const res = sdf('yyyy-MM-dd hh:mm:ss');
+const res1 = sdf('YYYY-MM-DD HH:mm:ss');
+// 2020-01-01 12:12:12
 
 // use format hooks
 const res2 = sdf('date');
-// 2020-01-01 12:12:12
+// 2020-01-01
 ```
 
 ## format hooks
