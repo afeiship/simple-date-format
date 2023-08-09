@@ -35,7 +35,7 @@ const FORMAT_HOOKS = {
 };
 ```
 
-## Formats
+## formats
 
 | format | Output           | Description          |
 |--------|------------------|----------------------|
