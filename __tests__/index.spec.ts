@@ -12,19 +12,19 @@ describe('api.basic', () => {
 
     const d = new Date('2019/01/01 12:00:00');
     // 1. date:
-    expect(sdf(d, 'date')).toBe('2019-01-01');
+    expect(sdf('date', d)).toBe('2019-01-01');
     // 2. datetime:
-    expect(sdf(d, 'datetime')).toBe('2019-01-01 12:00:00');
+    expect(sdf('datetime', d)).toBe('2019-01-01 12:00:00');
     // 3. time:
-    expect(sdf(d, 'time')).toBe('12:00:00');
+    expect(sdf('time', d)).toBe('12:00:00');
     // 4. month:
-    expect(sdf(d, 'month')).toBe('2019-01');
+    expect(sdf('month', d)).toBe('2019-01');
     // 5. dbdt:
-    expect(sdf(d, 'dbdt')).toBe('20190101_120000');
+    expect(sdf('dbdt', d)).toBe('20190101_120000');
   });
 
   test('normal format - YYYY-MM-DD HH:mm:ss', () => {
     const d = new Date('2019/01/01 12:00:00');
-    expect(sdf(d, 'YYYY-MM-DD HH:mm:ss')).toBe('2019-01-01 12:00:00');
+    expect(sdf('YYYY-MM-DD HH:mm:ss', d)).toBe('2019-01-01 12:00:00');
   });
 });

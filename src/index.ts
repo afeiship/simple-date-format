@@ -13,9 +13,9 @@ const FORMAT_HOOKS = {
   dbdt: 'YYYYMMDD_HHmmss',
 };
 
-const simpleDateFormat = (time: TimeType, format: string) => {
+const simpleDateFormat = (format: string, time?: TimeType) => {
   const reg = FORMAT_HOOKS[format] || format;
-  const date = typeof time === 'string' ? new Date(time) : time;
+  const date = time ? (typeof time === 'string' ? new Date(time) : time) : new Date();
   const map: any = {};
   map.YYYY = date.getFullYear();
   map.YY = ('' + map.YYYY).slice(2);

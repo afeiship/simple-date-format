@@ -13,9 +13,25 @@ npm install @jswork/simple-date-format
 
 ## usage
 ```js
-import simpleDateFormat from '@jswork/simple-date-format';
+import sdf from '@jswork/simple-date-format';
 
-// usage goes here.
+// get current datetime:
+const res = sdf('yyyy-MM-dd hh:mm:ss');
+
+// use format hooks
+const res2 = sdf('date');
+// 2020-01-01 12:12:12
+```
+
+## format hooks
+```js
+const FORMAT_HOOKS = {
+  date: 'YYYY-MM-DD',
+  datetime: 'YYYY-MM-DD HH:mm:ss',
+  time: 'HH:mm:ss',
+  month: 'YYYY-MM',
+  dbdt: 'YYYYMMDD_HHmmss',
+};
 ```
 
 ## license
