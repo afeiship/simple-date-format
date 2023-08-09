@@ -4,6 +4,7 @@ type TimeType = string | Date;
 
 // https://dayjs.gitee.io/docs/zh-CN/display/format
 // https://github.com/wechat-miniprogram/weui-miniprogram
+// https://tc39.es/ecma262/#sec-date-time-string-format
 
 const FORMAT_HOOKS = {
   date: 'YYYY-MM-DD',
