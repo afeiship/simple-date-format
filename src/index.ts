@@ -14,6 +14,9 @@ const FORMAT_HOOKS = {
   dbdt: 'YYYYMMDD_HHmmss',
 };
 
+// m -> mm
+const pad = (n: number) => (n < 10 ? '0' + n : n);
+
 const simpleDateFormat = (format: string, time?: TimeType) => {
   const reg = FORMAT_HOOKS[format] || format;
   const date = time ? (typeof time === 'string' ? new Date(time) : time) : new Date();
@@ -21,15 +24,15 @@ const simpleDateFormat = (format: string, time?: TimeType) => {
   map.YYYY = date.getFullYear();
   map.YY = ('' + map.YYYY).slice(2);
   map.M = date.getMonth() + 1;
-  map.MM = (map.M < 10 ? '0' : '') + map.M;
+  map.MM = pad(map.M);
   map.D = date.getDate();
-  map.DD = (map.D < 10 ? '0' : '') + map.D;
+  map.DD = pad(map.D);
   map.H = date.getHours();
-  map.HH = (map.H < 10 ? '0' : '') + map.H;
+  map.HH = pad(map.H);
   map.m = date.getMinutes();
-  map.mm = (map.m < 10 ? '0' : '') + map.m;
+  map.mm = pad(map.m);
   map.s = date.getSeconds();
-  map.ss = (map.s < 10 ? '0' : '') + map.s;
+  map.ss = pad(map.s);
 
   return reg.replace(/\bYYYY|YY|MM|M|DD|D|HH|H|mm|m|ss|s\b/g, ($1) => map[$1]);
 };
