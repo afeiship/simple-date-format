@@ -1,6 +1,6 @@
 {
   "name": "@jswork/simple-date-format",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A simple date format.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -55,6 +55,9 @@
   "keywords": [
     "dateformat",
     "format",
-    "sdf"
+    "sdf",
+    "date",
+    "datetime",
+    "dayjs"
   ]
 }
