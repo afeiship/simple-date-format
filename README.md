@@ -32,6 +32,7 @@ const FORMAT_HOOKS = {
   time: 'HH:mm:ss',
   month: 'YYYY-MM',
   dbdt: 'YYYYMMDD_HHmmss',
+  fullday: 'YYYY/YYYY-MM/YYYY-MM-DD'
 };
 ```
 

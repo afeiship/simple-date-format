@@ -21,6 +21,8 @@ describe('api.basic', () => {
     expect(sdf('month', d)).toBe('2019-01');
     // 5. dbdt:
     expect(sdf('dbdt', d)).toBe('20190101_120000');
+    // 6. fullday
+    expect(sdf('fullday', d)).toBe('2019/2019-01/2019-01-01');
   });
 
   test('normal format - YYYY-MM-DD HH:mm:ss', () => {
@@ -28,7 +30,7 @@ describe('api.basic', () => {
     expect(sdf('YYYY-MM-DD HH:mm:ss', d)).toBe('2019-01-01 12:00:00');
   });
 
-  test.only('invalid input', () => {
+  test('invalid input', () => {
     const toThow = () => sdf('YYYY-MM-DD HH:mm:ss', 'xyz');
     expect(toThow).toThrowError('invalid input');
   })
