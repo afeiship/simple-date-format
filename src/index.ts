@@ -1,6 +1,6 @@
 declare var wx: any;
 
-type TimeType = string | Date;
+
 
 // https://dayjs.gitee.io/docs/zh-CN/display/format
 // https://github.com/wechat-miniprogram/weui-miniprogram
@@ -16,6 +16,7 @@ const FORMAT_HOOKS = {
 } as const;
 
 export type FormatKey = keyof typeof FORMAT_HOOKS;
+export type TimeType = string | Date;
 
 // m -> mm
 const pad = (n: number) => (n < 10 ? '0' + n : n);
