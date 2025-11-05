@@ -13,7 +13,9 @@ const FORMAT_HOOKS = {
   month: 'YYYY-MM',
   dbdt: 'YYYYMMDD_HHmmss',
   fullday: 'YYYY/YYYY-MM/YYYY-MM-DD',
-};
+} as const;
+
+export type FormatKey = keyof typeof FORMAT_HOOKS;
 
 // m -> mm
 const pad = (n: number) => (n < 10 ? '0' + n : n);
